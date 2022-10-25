@@ -1,0 +1,12 @@
+{
+  "swagger": {
+    "basePath": "/swagger",
+    "proxy": "/proxy",
+    "addServer": "/addserver",
+    "getAllServers": "/servers",
+    "deleteServer": "/delete",
+    "addFolder": "/addfolder",
+    "getAllFolders": "/folders",
+    "deleteFolder": "/deletefolder"
+  }
+}

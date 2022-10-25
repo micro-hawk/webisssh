@@ -1,0 +1,9 @@
+{
+  "mov5dc4e0": {
+    "name": "rest api",
+    "proto": "http://",
+    "endpoint": "192.168.0.104:8070/rest-api",
+    "docPath": "/v2/api-docs",
+    "id": "mov5dc4e0"
+  }
+}

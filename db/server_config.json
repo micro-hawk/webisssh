@@ -1,0 +1,16 @@
+{
+  "bmpfi5nlv": {
+    "name": "sample server",
+    "proto": "http://",
+    "endpoint": "127.0.0.1:9501/auth",
+    "docPath": "/v3/api-docs",
+    "id": "bmpfi5nlv"
+  },
+  "f8dj8vb3k": {
+    "name": "Main",
+    "proto": "http://",
+    "endpoint": "localhost:8100/flexehr",
+    "docPath": "/v3/api-docs",
+    "id": "f8dj8vb3k"
+  }
+}

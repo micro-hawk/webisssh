@@ -1,0 +1,3291 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "APIs",
+    "description": "Documentation APIs v1.0",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://192.168.0.115:8100/flexehr",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/medicine/update": {
+      "put": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "updateMedicine",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMedicineDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMedicineDataDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/update": {
+      "put": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "updateMasterHospital",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMasterHospitalRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMasterHospitalDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/updateLogo": {
+      "put": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "updateHospitalLogo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMasterHospitalRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMasterHospitalDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/delete/{hospitalCode}": {
+      "put": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "inactiveMasterHospital",
+        "parameters": [
+          {
+            "name": "hospitalCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMasterHospitalDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/OPD/update": {
+      "put": {
+        "tags": [
+          "opd-insurance-controller"
+        ],
+        "operationId": "updateOpdInsurance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddOpdInsuranceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseOpdInsuranceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/IPD/update": {
+      "put": {
+        "tags": [
+          "ipd-insurance-controller"
+        ],
+        "operationId": "updateIpdInsurance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddIpdInsuranceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseIpdInsuranceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/injection/update": {
+      "put": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "updateInjectionData",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddInjectionDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseInjectionDataDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalUser/delete/{userEmail}": {
+      "put": {
+        "tags": [
+          "hospital-user-controller"
+        ],
+        "operationId": "markUserInActive",
+        "parameters": [
+          {
+            "name": "userEmail",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalBranch/update": {
+      "put": {
+        "tags": [
+          "hospital-branch-controller"
+        ],
+        "operationId": "updateBranch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddHospitalBranchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalBranchDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalBranch/delete/{branchCode}": {
+      "put": {
+        "tags": [
+          "hospital-branch-controller"
+        ],
+        "operationId": "markBranchInActive",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalBranchDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/referral/add": {
+      "post": {
+        "tags": [
+          "hospital-referral-controller"
+        ],
+        "operationId": "addNewReferral",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddHospitalReferralRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalReferralDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/medicine/add": {
+      "post": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "addMedicineData",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMedicineDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMedicineDataDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/onboarding": {
+      "post": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "saveOnBoardingRegistration",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddHospitalOnBoardingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/add": {
+      "post": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "saveHospital",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMasterHospitalRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMasterHospitalDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/OPD/add": {
+      "post": {
+        "tags": [
+          "opd-insurance-controller"
+        ],
+        "operationId": "saveOpdInsurance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddOpdInsuranceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseOpdInsuranceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/IPD/add": {
+      "post": {
+        "tags": [
+          "ipd-insurance-controller"
+        ],
+        "operationId": "saveIpdInsurance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddIpdInsuranceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseIpdInsuranceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/injection/add": {
+      "post": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "addInjectionData",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddInjectionDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseInjectionDataDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalUser/add": {
+      "post": {
+        "tags": [
+          "hospital-user-controller"
+        ],
+        "operationId": "addNewUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddHospitalUserRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalBranch/add": {
+      "post": {
+        "tags": [
+          "hospital-branch-controller"
+        ],
+        "operationId": "addNewBranch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddHospitalBranchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalBranchDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/referral/{referralCode}": {
+      "get": {
+        "tags": [
+          "hospital-referral-controller"
+        ],
+        "operationId": "getReferralByReferralCode",
+        "parameters": [
+          {
+            "name": "referralCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalReferralDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "hospital-referral-controller"
+        ],
+        "operationId": "deleteReferralByReferralCode",
+        "parameters": [
+          {
+            "name": "referralCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseHospitalReferralDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/referral/masterHospital/{hospitalCode}/all": {
+      "get": {
+        "tags": [
+          "hospital-referral-controller"
+        ],
+        "operationId": "getAllReferralsByHospitalCode",
+        "parameters": [
+          {
+            "name": "hospitalCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HospitalReferralDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/referral/hospitalBranch/{branchCode}/all": {
+      "get": {
+        "tags": [
+          "hospital-referral-controller"
+        ],
+        "operationId": "getAllReferralByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HospitalReferralDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/medicine/{medicineCode}": {
+      "get": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "getMedicineByMedicineCode",
+        "parameters": [
+          {
+            "name": "medicineCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/MedicineDataDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "deleteMedicineByMedicineCode",
+        "parameters": [
+          {
+            "name": "medicineCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMedicineDataDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/medicine/masterHospital/{hospitalCode}/all": {
+      "get": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "getAllMedicinesByHospitalCode",
+        "parameters": [
+          {
+            "name": "hospitalCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineDataDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/medicine/hospitalBranch/{branchCode}/all": {
+      "get": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "getAllMedicinesByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineDataDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/{hospitalCode}": {
+      "get": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "getHospitalByHospitalCode",
+        "parameters": [
+          {
+            "name": "hospitalCode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMasterHospitalDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/masterHospital/admin/{adminUserId}": {
+      "get": {
+        "tags": [
+          "master-hospital-controller"
+        ],
+        "operationId": "getHospitalDetailsByAdminUserId",
+        "parameters": [
+          {
+            "name": "adminUserId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseMasterHospitalDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/OPD/{insuranceCode}": {
+      "get": {
+        "tags": [
+          "opd-insurance-controller"
+        ],
+        "operationId": "getInusranceByInusranceCode",
+        "parameters": [
+          {
+            "name": "insuranceCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseOpdInsuranceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/OPD/insuranceCompanyName/all": {
+      "get": {
+        "tags": [
+          "opd-insurance-controller"
+        ],
+        "operationId": "getAllInsuranceCompanyName",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseListString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/OPD/all": {
+      "get": {
+        "tags": [
+          "opd-insurance-controller"
+        ],
+        "operationId": "getAllOpdInsurance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OpdInsuranceDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/IPD/{insuranceCode}": {
+      "get": {
+        "tags": [
+          "ipd-insurance-controller"
+        ],
+        "operationId": "getIpdInsuranceByInsuranceCode",
+        "parameters": [
+          {
+            "name": "insuranceCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseIpdInsuranceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/IPD/insuranceCompanyName/all": {
+      "get": {
+        "tags": [
+          "ipd-insurance-controller"
+        ],
+        "operationId": "getAllInsuranceCompanyName_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseListString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/insurance/IPD/all": {
+      "get": {
+        "tags": [
+          "ipd-insurance-controller"
+        ],
+        "operationId": "getAllIpdInsurance",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IpdInsuranceDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/injection/{injectionCode}": {
+      "get": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "getInjectionByInjectionCode",
+        "parameters": [
+          {
+            "name": "injectionCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/InjectionDataDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "deleteInjectionByInjectionCode",
+        "parameters": [
+          {
+            "name": "injectionCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseInjectionDataDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/injection/masterHospital/{hospitalCode}/all": {
+      "get": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "getAllInjectionsByHospitalCode",
+        "parameters": [
+          {
+            "name": "hospitalCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InjectionDataDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/injection/hospitalBranch/{branchCode}/all": {
+      "get": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "getAllInjectionsByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InjectionDataDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalUser/{branchCode}/all": {
+      "get": {
+        "tags": [
+          "hospital-user-controller"
+        ],
+        "operationId": "getAllUsersByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalResponseListHospitalUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalBranch/{hospitalCode}/all": {
+      "get": {
+        "tags": [
+          "hospital-branch-controller"
+        ],
+        "operationId": "getBranchByHospitalCode",
+        "parameters": [
+          {
+            "name": "hospitalCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HospitalBranchDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hospitalBranch/{branchCode}": {
+      "get": {
+        "tags": [
+          "hospital-branch-controller"
+        ],
+        "operationId": "getBranchByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalBranchDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/medicine/{branchCode}/all": {
+      "delete": {
+        "tags": [
+          "medicine-data-controller"
+        ],
+        "operationId": "deleteAllMedicinesByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineDataDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/injection/{branchCode}/all": {
+      "delete": {
+        "tags": [
+          "injection-data-controller"
+        ],
+        "operationId": "deleteAllInjectionsByBranchCode",
+        "parameters": [
+          {
+            "name": "branchCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InjectionDataDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddMedicineDataRequest": {
+        "type": "object",
+        "properties": {
+          "medicineName": {
+            "type": "string"
+          },
+          "medicineDoses": {
+            "type": "string"
+          },
+          "medicineComposition": {
+            "type": "string"
+          },
+          "medicineCode": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseMedicineDataDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/MedicineDataDto"
+          }
+        }
+      },
+      "MedicineDataDto": {
+        "type": "object",
+        "properties": {
+          "medicineName": {
+            "type": "string"
+          },
+          "medicineDoses": {
+            "type": "string"
+          },
+          "medicineComposition": {
+            "type": "string"
+          },
+          "medicineCode": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          }
+        }
+      },
+      "AddMasterHospitalRequest": {
+        "type": "object",
+        "properties": {
+          "hospitalName": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalLogo": {
+            "type": "string"
+          },
+          "adminUserId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "adminMail": {
+            "type": "string"
+          },
+          "maxBranchesAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxUsersAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "adminFirstName": {
+            "type": "string"
+          },
+          "adminMiddleName": {
+            "type": "string"
+          },
+          "adminLastName": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseMasterHospitalDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/MasterHospitalDto"
+          }
+        }
+      },
+      "MasterHospitalDto": {
+        "type": "object",
+        "properties": {
+          "hospitalName": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalLogo": {
+            "type": "string"
+          },
+          "adminMail": {
+            "type": "string"
+          },
+          "adminUserId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "maxBranchesAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxUsersAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AddOpdInsuranceRequest": {
+        "type": "object",
+        "properties": {
+          "insuranceCode": {
+            "type": "string"
+          },
+          "insuranceCompanyName": {
+            "type": "string"
+          },
+          "particulars": {
+            "type": "string"
+          },
+          "totalCharge": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverPercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalName": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseOpdInsuranceDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/OpdInsuranceDto"
+          }
+        }
+      },
+      "OpdInsuranceDto": {
+        "type": "object",
+        "properties": {
+          "insuranceCode": {
+            "type": "string"
+          },
+          "insuranceCompanyName": {
+            "type": "string"
+          },
+          "particulars": {
+            "type": "string"
+          },
+          "totalCharge": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverPercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalName": {
+            "type": "string"
+          }
+        }
+      },
+      "AddIpdInsuranceRequest": {
+        "type": "object",
+        "properties": {
+          "insuranceCode": {
+            "type": "string"
+          },
+          "insuranceCompanyName": {
+            "type": "string"
+          },
+          "particulars": {
+            "type": "string"
+          },
+          "totalCharge": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverPercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalName": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseIpdInsuranceDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/IpdInsuranceDto"
+          }
+        }
+      },
+      "IpdInsuranceDto": {
+        "type": "object",
+        "properties": {
+          "insuranceCompanyName": {
+            "type": "string"
+          },
+          "particulars": {
+            "type": "string"
+          },
+          "totalCharge": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "waiverPercentage": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "AddInjectionDataRequest": {
+        "type": "object",
+        "properties": {
+          "injectionName": {
+            "type": "string"
+          },
+          "injectionCode": {
+            "type": "string"
+          },
+          "injectionDoses": {
+            "type": "string"
+          },
+          "injectionComposition": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseInjectionDataDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/InjectionDataDto"
+          }
+        }
+      },
+      "InjectionDataDto": {
+        "type": "object",
+        "properties": {
+          "injectionName": {
+            "type": "string"
+          },
+          "injectionCode": {
+            "type": "string"
+          },
+          "injectionComposition": {
+            "type": "string"
+          },
+          "injectionDoses": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseHospitalUserDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/HospitalUserDto"
+          }
+        }
+      },
+      "HospitalUserDto": {
+        "type": "object",
+        "properties": {
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalName": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          },
+          "branchName": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "dataOfBirth": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "userEmail": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "ROOT_ADMIN",
+              "HOSPITAL_ADMIN",
+              "RECEPTION",
+              "OPTOMETRIST",
+              "DOCTOR",
+              "OT_PERSON",
+              "OT_INVENTORY",
+              "COUNSELOR",
+              "LABORATORY",
+              "PHARMACY",
+              "OPTICAL"
+            ]
+          },
+          "doctorRegistrationNumber": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AddHospitalBranchRequest": {
+        "type": "object",
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weeklyOff": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Address": {
+        "type": "object",
+        "properties": {
+          "laneAddress": {
+            "type": "string"
+          },
+          "pinCode": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseHospitalBranchDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/HospitalBranchDto"
+          }
+        }
+      },
+      "HospitalBranchDto": {
+        "type": "object",
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weeklyOff": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AddHospitalReferralRequest": {
+        "type": "object",
+        "properties": {
+          "referralCode": {
+            "type": "string"
+          },
+          "referralDoctorName": {
+            "type": "string"
+          },
+          "referralHospitalName": {
+            "type": "string"
+          },
+          "referralDoctorRegistrationNumber": {
+            "type": "string"
+          },
+          "referralDoctorContactNumber": {
+            "type": "string"
+          },
+          "referralDoctorEmailId": {
+            "type": "string"
+          },
+          "commission": {
+            "type": "number",
+            "format": "double"
+          },
+          "currentHospitalCode": {
+            "type": "string"
+          },
+          "currentHospitalName": {
+            "type": "string"
+          },
+          "currentBranchCode": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseHospitalReferralDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "$ref": "#/components/schemas/HospitalReferralDto"
+          }
+        }
+      },
+      "HospitalReferralDto": {
+        "type": "object",
+        "properties": {
+          "referralCode": {
+            "type": "string"
+          },
+          "referralDoctorName": {
+            "type": "string"
+          },
+          "referralHospitalName": {
+            "type": "string"
+          },
+          "referralDoctorRegistrationNumber": {
+            "type": "string"
+          },
+          "referralDoctorContactNumber": {
+            "type": "string"
+          },
+          "referralDoctorEmailId": {
+            "type": "string"
+          },
+          "commission": {
+            "type": "number",
+            "format": "double"
+          },
+          "currentHospitalCode": {
+            "type": "string"
+          },
+          "currentHospitalName": {
+            "type": "string"
+          }
+        }
+      },
+      "AddHospitalOnBoardingRequest": {
+        "type": "object",
+        "properties": {
+          "hospitalName": {
+            "type": "string"
+          },
+          "hospitalCode": {
+            "type": "string"
+          },
+          "adminUserId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "adminMail": {
+            "type": "string"
+          },
+          "maxBranchesAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxUsersAllowed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adminFirstName": {
+            "type": "string"
+          },
+          "adminMiddleName": {
+            "type": "string"
+          },
+          "adminLastName": {
+            "type": "string"
+          },
+          "adminDateOfBirth": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "adminMobileNumber": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "ROOT_ADMIN",
+              "HOSPITAL_ADMIN",
+              "RECEPTION",
+              "OPTOMETRIST",
+              "DOCTOR",
+              "OT_PERSON",
+              "OT_INVENTORY",
+              "COUNSELOR",
+              "LABORATORY",
+              "PHARMACY",
+              "OPTICAL"
+            ]
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      },
+      "GlobalResponseBoolean": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AddHospitalUserRequest": {
+        "type": "object",
+        "properties": {
+          "hospitalCode": {
+            "type": "string"
+          },
+          "hospitalName": {
+            "type": "string"
+          },
+          "branchCode": {
+            "type": "string"
+          },
+          "branchName": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "dateOfBirth": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "mobileNumber": {
+            "type": "string"
+          },
+          "userEmail": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "ROOT_ADMIN",
+              "HOSPITAL_ADMIN",
+              "RECEPTION",
+              "OPTOMETRIST",
+              "DOCTOR",
+              "OT_PERSON",
+              "OT_INVENTORY",
+              "COUNSELOR",
+              "LABORATORY",
+              "PHARMACY",
+              "OPTICAL"
+            ]
+          },
+          "doctorRegistrationNumber": {
+            "type": "string"
+          }
+        }
+      },
+      "GlobalResponseListString": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "GlobalResponseListHospitalUserDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "100 CONTINUE",
+              "101 SWITCHING_PROTOCOLS",
+              "102 PROCESSING",
+              "103 CHECKPOINT",
+              "200 OK",
+              "201 CREATED",
+              "202 ACCEPTED",
+              "203 NON_AUTHORITATIVE_INFORMATION",
+              "204 NO_CONTENT",
+              "205 RESET_CONTENT",
+              "206 PARTIAL_CONTENT",
+              "207 MULTI_STATUS",
+              "208 ALREADY_REPORTED",
+              "226 IM_USED",
+              "300 MULTIPLE_CHOICES",
+              "301 MOVED_PERMANENTLY",
+              "302 FOUND",
+              "302 MOVED_TEMPORARILY",
+              "303 SEE_OTHER",
+              "304 NOT_MODIFIED",
+              "305 USE_PROXY",
+              "307 TEMPORARY_REDIRECT",
+              "308 PERMANENT_REDIRECT",
+              "400 BAD_REQUEST",
+              "401 UNAUTHORIZED",
+              "402 PAYMENT_REQUIRED",
+              "403 FORBIDDEN",
+              "404 NOT_FOUND",
+              "405 METHOD_NOT_ALLOWED",
+              "406 NOT_ACCEPTABLE",
+              "407 PROXY_AUTHENTICATION_REQUIRED",
+              "408 REQUEST_TIMEOUT",
+              "409 CONFLICT",
+              "410 GONE",
+              "411 LENGTH_REQUIRED",
+              "412 PRECONDITION_FAILED",
+              "413 PAYLOAD_TOO_LARGE",
+              "413 REQUEST_ENTITY_TOO_LARGE",
+              "414 URI_TOO_LONG",
+              "414 REQUEST_URI_TOO_LONG",
+              "415 UNSUPPORTED_MEDIA_TYPE",
+              "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+              "417 EXPECTATION_FAILED",
+              "418 I_AM_A_TEAPOT",
+              "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+              "420 METHOD_FAILURE",
+              "421 DESTINATION_LOCKED",
+              "422 UNPROCESSABLE_ENTITY",
+              "423 LOCKED",
+              "424 FAILED_DEPENDENCY",
+              "425 TOO_EARLY",
+              "426 UPGRADE_REQUIRED",
+              "428 PRECONDITION_REQUIRED",
+              "429 TOO_MANY_REQUESTS",
+              "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+              "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+              "500 INTERNAL_SERVER_ERROR",
+              "501 NOT_IMPLEMENTED",
+              "502 BAD_GATEWAY",
+              "503 SERVICE_UNAVAILABLE",
+              "504 GATEWAY_TIMEOUT",
+              "505 HTTP_VERSION_NOT_SUPPORTED",
+              "506 VARIANT_ALSO_NEGOTIATES",
+              "507 INSUFFICIENT_STORAGE",
+              "508 LOOP_DETECTED",
+              "509 BANDWIDTH_LIMIT_EXCEEDED",
+              "510 NOT_EXTENDED",
+              "511 NETWORK_AUTHENTICATION_REQUIRED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "apiResponseStatus": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "USER_ADD_ERROR",
+              "USER_UPDATE_ERROR",
+              "MAIL_ALREADY_EXIST",
+              "DATA_INVALID",
+              "FAILURE",
+              "USER_NOT_REGISTERED",
+              "INVALID_MAIL_ID",
+              "INVALID_USERNAME",
+              "UNSPECIFIED_ERROR",
+              "USERNAME_NO",
+              "INVALID_ACCESS_TOKEN",
+              "INVALID_INSURANCE_WAIVER",
+              "INVALID_ADMIN_USER_ID",
+              "INVALID_REFERRAL_CODE",
+              "ACCESS_INVALID",
+              "SYSTEM_PARAMETER_ADD_ERROR",
+              "SYSTEM_PARAMETER_UPDATE_ERROR",
+              "USER_NOT_FOUND",
+              "HOSPITAL_NOT_FOUND",
+              "BRANCH_NOT_FOUND",
+              "MEDICINE_NOT_FOUND",
+              "INJECTION_NOT_FOUND",
+              "INSURANCE_NOT_FOUND",
+              "CMS_CONFIG_NOT_FOUND",
+              "CMS_CONFIG_KEY_ALREADY_EXISTS",
+              "KNOWLEDGE_BANK_TAG_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_ALREADY_EXISTS",
+              "SYSTEM_PARAMETER_VALUE_MISMATCH"
+            ]
+          },
+          "responseCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseObject": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HospitalUserDto"
+            }
+          }
+        }
+      }
+    }
+  }
+}

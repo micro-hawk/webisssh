@@ -1,0 +1,8 @@
+logs
+*.log
+npm-debug.log*
+
+node_modeules/
+
+# vuepress build output
+.vuepress/dist
