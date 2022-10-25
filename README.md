@@ -1,6 +1,6 @@
-# Pikachu
+# Webisssh
 
-Pikachu is web based tool for devlopers to make there development smart and fast.
+Webisssh is web based tool for devlopers to make there development smart and fast.
 
 ## How to setup
 
@@ -11,7 +11,7 @@ Install Node  [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 - To clone
 
 ```bash
-git clone https://github.com/complex1/pikachu.git
+git clone https://github.com/micro-hawk/webisssh.git
 ```
 
 ```bash
