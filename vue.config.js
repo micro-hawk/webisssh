@@ -9,5 +9,8 @@ module.exports = {
         '@var': path.resolve(__dirname, 'client/assets/scss/vars.scss')
       }
     }
-  }
+  },
+  chainWebpack: config => {
+    config.module.rules.delete('eslint');
+}
 }
