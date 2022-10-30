@@ -7,7 +7,7 @@
         <router-link :to="{name: 'Home'}" class="tx-n tx-light"> Home </router-link>
       </li>
       <li class="mx-2">
-        <router-link :to="{name: 'SwaggerApiDosc'}" class="tx-n tx-light"> APIs </router-link>
+        <router-link :to="{name: 'SwaggerApiDoc'}" class="tx-n tx-light"> APIs </router-link>
       </li>
       <li class="mx-2">
         <router-link :to="{name: 'JsonFormatter'}" class="tx-n tx-light"> Json Formatter </router-link>
